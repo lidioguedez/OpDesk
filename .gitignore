@@ -16,3 +16,5 @@ secrets/
 
 crm_test.py
 scripts/
+*/**/CLAUDE.md
+CLAUDE.md
