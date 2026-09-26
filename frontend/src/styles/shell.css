@@ -29,6 +29,11 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  /* A flex item with overflow != visible loses its automatic min-height, so in
+     the column-flex .main-content the page would shrink to the viewport and its
+     own overflow:hidden would clip the table bottom — no scroll anywhere.
+     flex-shrink:0 keeps the page at its content height; .main-content scrolls. */
+  flex-shrink: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
